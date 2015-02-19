@@ -12,8 +12,15 @@
       </div>
       </footer>
     </div> <!-- /container -->
-    <!-- Javascript at the bottom for fast page loading -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="2015_templates/js/bootstrap.min.js"></script>
+    <script src="2015_templates/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="2015_templates/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
