@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="2015_templates/css/bootstrap.css" rel="stylesheet">
-    <link href="2015_templates//css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="2015_templates//css/nav-hover.css" rel="stylesheet">
+    <link href="2015_templates/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="2015_templates/css/nav-hover.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-bottom: 40px;

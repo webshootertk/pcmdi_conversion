@@ -16,7 +16,7 @@
     <!-- Javascript at the bottom for fast page loading -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <!-- The following line makes external links open in new windows -->
-    <script src="/bootstrap.min.js"></script>
-    <script src="/npm.js"></script>
+    <script src="2015_templates/js/bootstrap.min.js"></script>
+    <script src="2015_templatesjs/npm.js"></script>
   </body>
 </html>
