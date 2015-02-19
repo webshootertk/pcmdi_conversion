@@ -1,12 +1,16 @@
     <hr>
     <footer>
-        <p><span style="font-size: 10px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; text-decoration: none; font-weight: bold;">UCRL-WEB-152471</span></p>
-        <p><a href="http://www.llnl.gov/disclaimer.html" class="sideNav">Privacy &amp; Legal Notice</a></p> 
-        <p class="size10White">Thanks to Our Sponsors:</p>
-        <a href="http://www.llnl.gov"><img src="http://www-pcmdi.llnl.gov/images/logo_llnl.jpg" width="60" height="60" border="0"></a>
-        <a href="http://www.science.energy.gov/ber/"><img src="http://www-pcmdi.llnl.gov/images/logo_ber.jpg" width="70" height="70" border="0"></a>
-        <a href="http://science.energy.gov/"><img src="http://www-pcmdi.llnl.gov/images/DOE_SC_Vertical_60h.png" width="164" height="60" border="0"></a>
-        <a href="http://www.llnl.gov" class="text">Lawrence Livermore National Laboratory</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www-pls.llnl.gov/" class="text">Physical  &amp; Life Sciences Directorate </a>
+    <div class-"well well-sm">
+        <a href="http://www.llnl.gov"><img src="http://www-pcmdi.llnl.gov/images/logo_llnl.jpg" width="60" height="60" border="1"></a> &nbsp;
+        <a href="http://www.science.energy.gov/ber/"><img src="http://www-pcmdi.llnl.gov/images/logo_ber.jpg" width="60" height="60" border="1"></a> &nbsp;
+        <a href="http://science.energy.gov/"><img src="http://www-pcmdi.llnl.gov/images/DOE_SC_Vertical_60h.png" width="164" height="60" border="1"></a> &nbsp;
+        <a href="http://www.llnl.gov" class="text">Lawrence Livermore National Laboratory</a> &nbsp;
+        <a href="http://www.llnl.gov/disclaimer.html" class="sideNav">Privacy &amp; Legal Notice</a> &nbsp;
+        <a href="https://www-pls.llnl.gov/" class="text">Physical  &amp; Life Sciences Directorate </a> &nbsp;
+        <a href="#" class="text">UCRL-WEB-152471</a> &nbsp;
+        <a href="sitemap.php" class="text">Site Map</a> &nbsp;
+        <a href="Links/links.php" class="text">Links</a>
+      </div>
       </footer>
     </div> <!-- /container -->
     <!-- Javascript at the bottom for fast page loading -->
