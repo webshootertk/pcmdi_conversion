@@ -1,4 +1,4 @@
-    <!-- Fixed navbar -->
+<!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -32,4 +32,4 @@
       </div>
     </nav>
 
-<div class="container" id="top">
+    <div class="container theme-showcase" role="main">

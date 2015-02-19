@@ -2,41 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+
     <title> <?php echo __FILE__; ?> </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="2015_templates/css/bootstrap.css" rel="stylesheet">
-    <link href="2015_templates/css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="2015_templates/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="2015_templates/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="2015_templates/css/theme.css" rel="stylesheet">
     <link href="2015_templates/css/nav-hover.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
 
-      @media (max-width: 980px) {
-      /* Enable use of
-      floated navbar
-      text */
-        .navbar-text.pull-right
-        {
-          float:
-          none;
-          padding-left:
-          5px;
-          padding-right:
-          5px;
-        }
-      }
-    </style>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="2015_templates/js/ie-emulation-modes-warning.js"></script>
 
-    <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-    <link rel="shortcut icon" href="media/images/favicon.ico">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <?php include_once('2015_templates/_includes/analytics.php') ?>
-    </head>
+  </head>
 
-  <body>
-
+  <body role="document">
