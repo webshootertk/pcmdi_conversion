@@ -32,3 +32,6 @@
   </head>
 
   <body role="document">
+    <?php include_once('/var/www/pcmdi-site/2015_templates/_includes/nav-www-pcmdi.php') ?>
+    <div class="container theme-showcase" role="main">
+    

@@ -84,5 +84,3 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-    <div class="container theme-showcase" role="main">
