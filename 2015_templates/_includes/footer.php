@@ -1,4 +1,5 @@
     <hr>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class-"well well-sm">
@@ -13,7 +14,6 @@
         </div>
       </div>
       </footer>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

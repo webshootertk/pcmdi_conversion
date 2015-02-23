@@ -4,7 +4,7 @@ import re
 
 
 starts_with = "<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/header.php') ?>\n" + \
-              "\n<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/nav-www-pcmdi.php') ?>\n"
+              "<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/nav-www-pcmdi.php') ?>\n"
 ends_with =   "\n<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/footer.php') ?>"
 
 file_count = 0

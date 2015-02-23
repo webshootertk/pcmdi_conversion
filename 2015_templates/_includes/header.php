@@ -30,6 +30,3 @@
     <![endif]-->
     <?php include_once('/var/www/pcmdi-site/2015_templates/_includes/analytics.php') ?>
   </head>
-
-  <body role="document">
-    
