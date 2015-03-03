@@ -7,10 +7,9 @@ starts_with = "<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/
               "<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/nav-www-pcmdi.php') ?>\n"
 ends_with =   "\n<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/footer.php') ?>"
 
-file_count = 0
 
 def writeOut(text, name):
-    #file_count += 1
+    file_count += 1
     text = starts_with + text + ends_with
     filtered = filter(lambda x: not re.match(r'^\s*$', x), text)
     outFile = open(os.path.join(root, name.split('.')[0] + '.php'), 'w') 
@@ -24,6 +23,7 @@ def writeReview(name, root):
     listFile.close()
 
 
+file_count = 0
 for root, dirs, files in os.walk(".", topdown=True):
     
     for name in files:
