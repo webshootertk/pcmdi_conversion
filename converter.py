@@ -7,7 +7,6 @@ file_count = 0
 
 def writeOut(text, name):
     #file_count += 1
-    text = starts_with + text + ends_with
     filtered = filter(lambda x: not re.match(r'^\s*$', x), text)
     outFile = open(os.path.join(root, name.split('.')[0] + '.php'), 'w') 
     outFile.write(text)
