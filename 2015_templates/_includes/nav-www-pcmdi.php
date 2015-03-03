@@ -18,7 +18,7 @@
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/about/index.php">About PCMDI</a></li>
                 <li><a href="/about/staff.php">Staff Directory</a></li>
-                <li><a href="/about/locations.php">Locations</a></li>
+                <li><a href="/about/location.php">Locations</a></li>
               </ul>
             </li>
 
