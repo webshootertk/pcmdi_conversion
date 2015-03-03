@@ -12,7 +12,9 @@ html_count = 0
 php_count = 0
 manual_review_count = 0
 
+
 def writeOut(text, name):
+    file_count += 1
     text = starts_with + text + ends_with
     filtered = filter(lambda x: not re.match(r'^\s*$', x), text)
     outFile = open(os.path.join(root, name.split('.')[0] + '.php'), 'w') 
@@ -26,6 +28,7 @@ def writeReview(name, root):
     listFile.close()
 
 
+file_count = 0
 for root, dirs, files in os.walk(".", topdown=True):
     
     for name in files:
