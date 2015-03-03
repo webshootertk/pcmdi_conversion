@@ -12,6 +12,14 @@ html_count = 0
 php_count = 0
 manual_review_count = 0
 
+def stripPhp(text):
+    newText = text
+    if "<?" in text:
+        startIndex = text.find("<?")
+        stopIndex = text.find("?>")
+        newText = text[:startIndex]
+        newText += text[:stopIndex]
+    return newText
 
 def writeOut(text, name):
     file_count += 1
@@ -28,7 +36,6 @@ def writeReview(name, root):
     listFile.close()
 
 
-file_count = 0
 for root, dirs, files in os.walk(".", topdown=True):
     
     for name in files:
@@ -38,6 +45,7 @@ for root, dirs, files in os.walk(".", topdown=True):
             text = inFile.read()
             inFile.close()
             os.rename(os.path.join(root, name), os.path.join(root, '_'+name))
+            text = stripPhp(text) 
 
             if "<!-- startprint -->" in text:
                 if name.endswith('.html'):
