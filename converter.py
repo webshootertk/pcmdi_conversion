@@ -1,16 +1,11 @@
 import sys 
 import os 
 import re
+from BeautifulSoup import BeautifulSoup
 
 starts_with = "<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/header.php') ?>\n" + \
               "<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/nav-www-pcmdi.php') ?>\n"
 ends_with =   "\n<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/footer.php') ?>"
-
-
-file_count = 0
-html_count = 0
-php_count = 0
-manual_review_count = 0
 
 def stripPhp(text, name):
     newText = text
@@ -40,6 +35,11 @@ def writeReview(name, root):
     listFile.write(os.path.join(root,name) + '\n')
     listFile.close()
 
+file_count = 0
+html_count = 0
+php_count = 0
+manual_review_count = 0
+
 
 for root, dirs, files in os.walk(".", topdown=True):
     
@@ -63,6 +63,9 @@ for root, dirs, files in os.walk(".", topdown=True):
                 writeOut(newText, name)
             else:
                 manual_review_count += 1
+                soup = BeautifulSoup(text)
+                text = str(soup.body)
+                text = text[6:len(text)-6]
                 writeReview(name, root)
                 writeOut(text, name)
         else: 
