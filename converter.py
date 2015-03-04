@@ -73,5 +73,5 @@ for root, dirs, files in os.walk(".", topdown=True):
 print "\nTotal file count: " + str(file_count)
 print ".html files converted: " + str(html_count)
 print ".php files touched: " + str(php_count)
-print "There are " + str(manual_review_count) + " files to be manually reviewed"
+print "There are " + str(manual_review_count) + " raw html files"
 
