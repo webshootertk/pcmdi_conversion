@@ -12,11 +12,6 @@ def stripPhp(text, name):
     while newText.find("<?") != -1:
         startIndex = newText.find("<?")
         stopIndex = newText.find("?>")
-        if(stopIndex == -1):
-            print "[-] couldnt find php end tag"
-            break
-        print "startIndex:" + str(startIndex) + ' stopIndex:' + str(stopIndex)
-        print "---> found some php in " + name + '\n' + newText[startIndex:stopIndex+2]
         tempText = newText
         newText = tempText[:startIndex]
         newText += tempText[stopIndex+2:]
@@ -30,7 +25,6 @@ def writeOut(text, name):
     outFile.close()
 
 def writeReview(name, root):
-    print 'Adding ' + name + ' to manual review'
     listFile = open(os.path.join('.', 'manual_review.txt'), 'a')
     listFile.write(os.path.join(root,name) + '\n')
     listFile.close()
@@ -51,7 +45,7 @@ for root, dirs, files in os.walk(".", topdown=True):
             inFile.close()
             os.rename(os.path.join(root, name), os.path.join(root, '_'+name))
             text = stripPhp(text, name) 
-
+            print os.path.join(root, name)
             if "<!-- startprint -->" in text:
                 if name.endswith('.html'):
                     html_count += 1
@@ -64,10 +58,14 @@ for root, dirs, files in os.walk(".", topdown=True):
             else:
                 manual_review_count += 1
                 soup = BeautifulSoup(text)
-                text = str(soup.body)
-                text = text[6:len(text)-6]
+                newText = str(soup.body)
+                if len(newText) == 0:
+                    writeOut(text, name)
+                else:
+                    newText = newText[6:len(newText)-6]
+                    writeOut(newText, name)
                 writeReview(name, root)
-                writeOut(text, name)
+                
         else: 
             continue
 
