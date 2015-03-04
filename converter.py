@@ -12,17 +12,22 @@ html_count = 0
 php_count = 0
 manual_review_count = 0
 
-def stripPhp(text):
+def stripPhp(text, name):
     newText = text
-    if "<?" in text:
-        startIndex = text.find("<?")
-        stopIndex = text.find("?>")
-        newText = text[:startIndex]
-        newText += text[:stopIndex]
+    while newText.find("<?") != -1:
+        startIndex = newText.find("<?")
+        stopIndex = newText.find("?>")
+        if(stopIndex == -1):
+            print "[-] couldnt find php end tag"
+            break
+        print "startIndex:" + str(startIndex) + ' stopIndex:' + str(stopIndex)
+        print "---> found some php in " + name + '\n' + newText[startIndex:stopIndex+2]
+        tempText = newText
+        newText = tempText[:startIndex]
+        newText += tempText[stopIndex+2:]
     return newText
 
 def writeOut(text, name):
-    file_count += 1
     text = starts_with + text + ends_with
     filtered = filter(lambda x: not re.match(r'^\s*$', x), text)
     outFile = open(os.path.join(root, name.split('.')[0] + '.php'), 'w') 
@@ -45,7 +50,7 @@ for root, dirs, files in os.walk(".", topdown=True):
             text = inFile.read()
             inFile.close()
             os.rename(os.path.join(root, name), os.path.join(root, '_'+name))
-            text = stripPhp(text) 
+            text = stripPhp(text, name) 
 
             if "<!-- startprint -->" in text:
                 if name.endswith('.html'):
