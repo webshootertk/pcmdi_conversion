@@ -46,11 +46,11 @@ for root, dirs, files in os.walk(".", topdown=True):
             os.rename(os.path.join(root, name), os.path.join(root, '_'+name))
             text = stripPhp(text, name) 
             print os.path.join(root, name)
+            if name.endswith('.html'):
+                html_count += 1
+            elif name.endswith('.php'):
+                php_count += 1
             if "<!-- startprint -->" in text:
-                if name.endswith('.html'):
-                    html_count += 1
-                elif name.endswith('.php'):
-                    php_count += 1
                 startIndex = text.find("<!-- startprint -->")
                 stopIndex = text.find("<!-- stopprint -->")
                 newText = text[(startIndex+len("<!-- startprint -->")):stopIndex]
