@@ -36,16 +36,15 @@ manual_review_count = 0
 
 
 for root, dirs, files in os.walk(".", topdown=True):
-    
     for name in files:
         if (name.endswith('.html') or name.endswith('.php')):
-            file_count += 1
             inFile = open(os.path.join(root, name))
             text = inFile.read()
             inFile.close()
             os.rename(os.path.join(root, name), os.path.join(root, '_'+name))
             text = stripPhp(text, name) 
             print os.path.join(root, name)
+            file_count += 1
             if name.endswith('.html'):
                 html_count += 1
             elif name.endswith('.php'):
@@ -65,13 +64,10 @@ for root, dirs, files in os.walk(".", topdown=True):
                     newText = newText[6:len(newText)-6]
                     writeOut(newText, name)
                 writeReview(name, root)
-                
         else: 
             continue
-
 
 print "\nTotal file count: " + str(file_count)
 print ".html files converted: " + str(html_count)
 print ".php files touched: " + str(php_count)
 print "There are " + str(manual_review_count) + " raw html files"
-
