@@ -2,6 +2,7 @@ import sys
 import os 
 import re
 from BeautifulSoup import BeautifulSoup
+import subprocess
 
 starts_with = "<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/header.php') ?>\n" + \
               "<?php include_once('/var/www/pcmdi-site/2015_templates/_includes/nav-www-pcmdi.php') ?>\n"
@@ -33,6 +34,17 @@ file_count = 0
 html_count = 0
 php_count = 0
 manual_review_count = 0
+
+
+for root, dirs, files in os.walk(".", topdown=True):
+    for name in files:
+        list_of_links = os.popen('ls -l ' + os.path.join(root, name) + ' | grep ^l')
+        link = list_of_links.readline()
+        if len(link) != 0:
+            target = link.split()
+            target = target[len(target)-1]
+            os.system('mv ' + os.path.join(root, target) + ' ' + os.path.join(root, name))
+
 
 
 for root, dirs, files in os.walk(".", topdown=True):
